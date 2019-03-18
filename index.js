@@ -63,7 +63,7 @@ const help = `
   console.log(JSON.stringify(data, null, 2));
 }(argv));
 
-async function fetchData(url, { concurrency, onprogress = noop } = {}) {
+async function fetchData(url, { concurrency, onprogress = noop, ondata = noop } = {}) {
   debug('executing preflight request');
   const resp = await request.get(url);
   const $ = cheerio.load(resp.body);
@@ -77,7 +77,9 @@ async function fetchData(url, { concurrency, onprogress = noop } = {}) {
     debug('parsing row: %d', index + 1);
     processed += 1;
     onprogress(processed / rowCount, processed, rowCount);
-    return parseTable(resp.body);
+    const data = parseTable(resp.body);
+    ondata(data);
+    return data;
   }, { concurrency });
 }
 

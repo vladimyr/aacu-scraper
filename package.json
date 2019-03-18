@@ -11,8 +11,16 @@
   "config": {
     "url": "https://secure.aacu.org/iMIS/AACUR/Membership/MemberListAACU.aspx"
   },
+  "pkg": {
+    "targets": [
+      "node10-macos",
+      "node10-win"
+    ]
+  },
   "scripts": {
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "prerelease": "node script/build",
+    "release": "np"
   },
   "keywords": [
     "aacu",
@@ -45,12 +53,14 @@
     "tough-cookie": "^3.0.1"
   },
   "devDependencies": {
+    "del": "^4.0.0",
     "eslint": "^5.12.0",
     "eslint-config-semistandard": "^13.0.0",
     "eslint-config-standard": "^12.0.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-node": "^8.0.1",
     "eslint-plugin-promise": "^4.0.1",
-    "eslint-plugin-standard": "^4.0.0"
+    "eslint-plugin-standard": "^4.0.0",
+    "pkg": "^4.3.7"
   }
 }

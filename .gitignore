@@ -10,5 +10,8 @@ npm-debug.log*
 .idea
 *.sublime-*
 
+# build artifacts
+build
+
 # general
 .DS_Store
