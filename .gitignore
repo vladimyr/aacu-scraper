@@ -13,5 +13,8 @@ npm-debug.log*
 # build artifacts
 build
 
+# data
+data.json
+
 # general
 .DS_Store
