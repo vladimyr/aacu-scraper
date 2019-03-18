@@ -1,0 +1,56 @@
+{
+  "private": true,
+  "name": "aacu-scraper",
+  "version": "0.0.0",
+  "description": "Scrape AACU member list",
+  "main": "index.js",
+  "bin": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "config": {
+    "url": "https://secure.aacu.org/iMIS/AACUR/Membership/MemberListAACU.aspx"
+  },
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "keywords": [
+    "aacu",
+    "scraper",
+    "cli"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/vladimyr/aacu-scraper.git"
+  },
+  "author": {
+    "email": "d.vladimyr+dev@gmail.com",
+    "name": "Dario Vladovic",
+    "url": "https://github.com/vladimyr"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vladimyr/aacu-scraper/issues"
+  },
+  "homepage": "https://github.com/vladimyr/aacu-scraper",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "debug": "^4.1.1",
+    "gauge": "^2.7.4",
+    "got": "^9.6.0",
+    "kleur": "^3.0.2",
+    "minimist": "^1.2.0",
+    "minimist-options": "^4.0.1",
+    "p-map": "^2.0.0",
+    "tough-cookie": "^3.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^5.12.0",
+    "eslint-config-semistandard": "^13.0.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0"
+  }
+}
